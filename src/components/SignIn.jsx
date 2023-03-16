@@ -1,18 +1,23 @@
+import { TbUserCircle } from "react-icons/tb";
+
 function Register() {
   return (
-    <div className="max-h-fit ls:hero ls:bg-base-200 md:min-h-screen md:hero">
+    <div className="max-h-fit bg-base-200 ls:hero md:min-h-screen md:hero">
       <div className="h-full ls:hero-content ls:w-9/12 md:w-9/12 sm:h-min">
-        <form className="card shadow-2xl bg-base-100 ls:w-full">
-          <div className="card-body grid grid-cols-1 lg:grid-cols-2">
+        <form className="card shadow-2xl pt-32 bg-base-100 ls:w-full">
+          <div className="card-body grid gap-6 grid-cols-1 md:grid-cols-2">
+            <div className="md:col-span-2 relative flex justify-center">
+              <TbUserCircle className="w-52 h-52 absolute -bottom-10 " />
+            </div>
             {/* Input and Label Name User */}
-            <div className="form-control">
+            <div className="form-control md:col-span-2">
               <label className="label">
                 <span className="label-text">Nombre</span>
               </label>
               <input
                 type="text"
                 placeholder="Nombre"
-                className="input input-bordered w-11/12"
+                className="input input-bordered w-12/12"
               />
             </div>
             {/* Input and Label First Last Name */}
@@ -23,7 +28,7 @@ function Register() {
               <input
                 type="text"
                 placeholder="primer apellido"
-                className="input input-bordered w-11/12"
+                className="input input-bordered w-12/12"
               />
             </div>
             {/* Input and Label Second Last Name */}
@@ -34,18 +39,18 @@ function Register() {
               <input
                 type="text"
                 placeholder="segundo apellido"
-                className="input input-bordered w-11/12"
+                className="input input-bordered w-12/12"
               />
             </div>
             {/* Input and Label Email */}
-            <div className="form-control">
+            <div className="form-control md:col-span-2">
               <label className="label">
                 <span className="label-text">Correo</span>
               </label>
               <input
                 type="email"
                 placeholder="correo"
-                className="input input-bordered w-11/12"
+                className="input input-bordered w-12/12"
               />
             </div>
             {/* Input and Label Password */}
@@ -56,33 +61,38 @@ function Register() {
               <input
                 type="password"
                 placeholder="Contraseña"
-                className="input input-bordered w-11/12"
+                className="input input-bordered w-12/12"
+              />
+            </div>
+            {/* Input and Label Confirm Password */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Confirma tu contraseña</span>
+              </label>
+              <input
+                type="password"
+                placeholder="Contraseña"
+                className="input input-bordered w-12/12"
               />
             </div>
             {/* Input and Label Phone */}
-            <div className="form-control">
+            <div className="form-control md:col-span-2">
               <label className="label">
                 <span className="label-text">Telefono</span>
               </label>
               <input
                 type="tel"
                 placeholder="Telefono"
-                className="input input-bordered w-11/12"
+                className="input input-bordered w-12/12"
               />
-            </div>
-            {/* Input and Label Status */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Estatus</span>
-              </label>
-              <select className="select select-bordered w-11/12">
-                <option>A</option>
-                <option>D</option>
-              </select>
             </div>
           </div>
           <div className="card-body">
-            <input type="submit" value="Registrar" className="btn btn-outline"/>
+            <input
+              type="submit"
+              value="Registrar"
+              className="btn btn-primary"
+            />
           </div>
         </form>
       </div>

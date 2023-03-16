@@ -38,7 +38,7 @@ function Login() {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Registrar</button>
+              <button className="btn btn-primary">Iniciar Sessión</button>
             </div>
           </div>
         </form>
