@@ -1,16 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./components/Login";
-import SignIn from "./components/SignIn";
-import Dashboard from "./components/Dashboard";
+
+import Login from "./components/Login.jsx";
+import SignIn from "./components/SignIn.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+import Home from "./pages/Home.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/signing" element={<SignIn />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

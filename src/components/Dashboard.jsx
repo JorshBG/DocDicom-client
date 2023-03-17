@@ -1,5 +1,5 @@
 import SideBar from "./SideBar";
-import {NavBar} from "./NavBar";
+// import NavBar from "./NavBar";
 
 function Dashboard() {
   return (
@@ -9,7 +9,7 @@ function Dashboard() {
         type="checkbox"
         className="drawer-toggle"
       />
-      <NavBar />
+      {/*<NavBar />*/}
       <SideBar />
     </div>
   );
