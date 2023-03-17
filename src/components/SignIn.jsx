@@ -1,40 +1,51 @@
 import { TbUserCircle } from "react-icons/tb";
 import {Input} from "./Input.jsx";
+import Header from "../partials/Header.jsx";
 
 function Register() {
+  const idForm = 'register_form';
   return (
-    <div className="max-h-fit bg-base-200 ls:hero md:min-h-screen md:hero">
-      <div className="h-full ls:hero-content ls:w-9/12 md:w-9/12 sm:h-min">
-        <form className="card shadow-2xl pt-32 bg-base-100 ls:w-full">
-          <div className="card-body grid gap-6 grid-cols-1 md:grid-cols-2">
-            <div className="md:col-span-2 relative flex justify-center">
-              <TbUserCircle className="w-52 h-52 absolute -bottom-10 " />
-            </div>
-            {/* Input and Label Name User */}
-            <Input text={'Nombre'} placeholder={'Nombre'} type={'text'} colspan={2}/>
-            {/* Input and Label First Last Name */}
-            <Input text={'Primer apellido'} placeholder={'primer apellido'} type={'text'}/>
-            {/* Input and Label Second Last Name */}
-            <Input text={'Segundo apellido'} placeholder={'segundo apellido'} type={'text'}/>
-            {/* Input and Label Email */}
-            <Input text={'Correo'} placeholder={'correo'} type={'email'} colspan={2}/>
-            {/* Input and Label Password */}
-            <Input text={'Contraseña'} placeholder={'contraseña'} type={'password'}/>
-            {/* Input and Label Confirm Password */}
-            <Input text={'Confirmar contraseña'} placeholder={'contraseña'} type={'password'}/>
-            {/* Input and Label Phone */}
-            <Input text={'Teléfono'} placeholder={'teléfono'} type={'tel'} colspan={2}/>
+    <>
+        <Header showButtons={false}/>
+        <div className={'body-bg min-h-screen pt-12 md:pt-20 pb-6 px-2 md:px-0'}>
+
+          <header className="max-w-lg mx-auto">
+            <a href="#">
+              {/*<h1 className="text-4xl font-bold text-white text-center">Bienvenido</h1>*/}
+              <br/><br/>
+            </a>
+          </header>
+
+          <div className="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
+            <section>
+              <h3 className="font-bold text-2xl">Registrate</h3>
+            </section>
+
+            <section className="mt-10">
+              <form className="flex flex-col" id={idForm}>
+                <div className='grid grid-cols-2 gap-1'>
+                  <Input text={'Nombre'} type={'text'} id={`${idForm}->name`} colspan={2}/>
+                  <Input text={'Apellido paterno'} type={'text'} id={`${idForm}->ap_father`}/>
+                  <Input text={'Apeallido materno'} type={'text'} id={`${idForm}->ap_mother`}/>
+                  <Input text={'Contraseña'} type={'password'} id={`${idForm}->password`}/>
+                  <Input text={'Confirmar'} type={'password'} id={`${idForm}->con_password`}/>
+                  <Input text={'Teléfono'} type={'tel'} id={`${idForm}->tel`}/>
+                  <Input text={'Correo'} type={'email'} id={`${idForm}->email`}/>
+                </div>
+                <button
+                    className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
+                    type="submit">Registrarse
+                </button>
+              </form>
+            </section>
           </div>
-          <div className="card-body">
-            <input
-              type="submit"
-              value="Registrar"
-              className="btn btn-primary"
-            />
+
+          <div className="max-w-lg mx-auto text-center mt-12 mb-6">
+            <p className="text-white">¿Ya tienes cuenta? <a href="/signup" className="font-bold hover:underline">Registrate</a>.
+            </p>
           </div>
-        </form>
-      </div>
-    </div>
+        </div>
+    </>
   );
 }
 
