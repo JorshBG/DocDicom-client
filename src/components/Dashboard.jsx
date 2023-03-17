@@ -1,5 +1,5 @@
 import SideBar from "./SideBar";
-import NavBar from "./NavBar";
+import {NavBar} from "./NavBar";
 
 function Dashboard() {
   return (

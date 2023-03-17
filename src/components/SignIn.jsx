@@ -1,4 +1,5 @@
 import { TbUserCircle } from "react-icons/tb";
+import {Input} from "./Input.jsx";
 
 function Register() {
   return (
@@ -10,82 +11,19 @@ function Register() {
               <TbUserCircle className="w-52 h-52 absolute -bottom-10 " />
             </div>
             {/* Input and Label Name User */}
-            <div className="form-control md:col-span-2">
-              <label className="label">
-                <span className="label-text">Nombre</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Nombre"
-                className="input input-bordered w-12/12"
-              />
-            </div>
+            <Input text={'Nombre'} placeholder={'Nombre'} type={'text'} colspan={2}/>
             {/* Input and Label First Last Name */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Primer Apellido</span>
-              </label>
-              <input
-                type="text"
-                placeholder="primer apellido"
-                className="input input-bordered w-12/12"
-              />
-            </div>
+            <Input text={'Primer apellido'} placeholder={'primer apellido'} type={'text'}/>
             {/* Input and Label Second Last Name */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Segundo Apellido</span>
-              </label>
-              <input
-                type="text"
-                placeholder="segundo apellido"
-                className="input input-bordered w-12/12"
-              />
-            </div>
+            <Input text={'Segundo apellido'} placeholder={'segundo apellido'} type={'text'}/>
             {/* Input and Label Email */}
-            <div className="form-control md:col-span-2">
-              <label className="label">
-                <span className="label-text">Correo</span>
-              </label>
-              <input
-                type="email"
-                placeholder="correo"
-                className="input input-bordered w-12/12"
-              />
-            </div>
+            <Input text={'Correo'} placeholder={'correo'} type={'email'} colspan={2}/>
             {/* Input and Label Password */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Contraseña</span>
-              </label>
-              <input
-                type="password"
-                placeholder="Contraseña"
-                className="input input-bordered w-12/12"
-              />
-            </div>
+            <Input text={'Contraseña'} placeholder={'contraseña'} type={'password'}/>
             {/* Input and Label Confirm Password */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Confirma tu contraseña</span>
-              </label>
-              <input
-                type="password"
-                placeholder="Contraseña"
-                className="input input-bordered w-12/12"
-              />
-            </div>
+            <Input text={'Confirmar contraseña'} placeholder={'contraseña'} type={'password'}/>
             {/* Input and Label Phone */}
-            <div className="form-control md:col-span-2">
-              <label className="label">
-                <span className="label-text">Telefono</span>
-              </label>
-              <input
-                type="tel"
-                placeholder="Telefono"
-                className="input input-bordered w-12/12"
-              />
-            </div>
+            <Input text={'Teléfono'} placeholder={'teléfono'} type={'tel'} colspan={2}/>
           </div>
           <div className="card-body">
             <input
