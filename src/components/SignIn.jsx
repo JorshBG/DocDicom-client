@@ -27,10 +27,10 @@ function Register() {
                   <Input text={'Nombre'} type={'text'} id={`${idForm}->name`} colspan={2}/>
                   <Input text={'Apellido paterno'} type={'text'} id={`${idForm}->ap_father`}/>
                   <Input text={'Apeallido materno'} type={'text'} id={`${idForm}->ap_mother`}/>
-                  <Input text={'Contraseña'} type={'password'} id={`${idForm}->password`}/>
-                  <Input text={'Confirmar'} type={'password'} id={`${idForm}->con_password`}/>
                   <Input text={'Teléfono'} type={'tel'} id={`${idForm}->tel`}/>
                   <Input text={'Correo'} type={'email'} id={`${idForm}->email`}/>
+                  <Input text={'Contraseña'} type={'password'} id={`${idForm}->password`}/>
+                  <Input text={'Confirmar contraseña'} type={'password'} id={`${idForm}->con_password`}/>
                 </div>
                 <button
                     className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
@@ -41,7 +41,7 @@ function Register() {
           </div>
 
           <div className="max-w-lg mx-auto text-center mt-12 mb-6">
-            <p className="text-white">¿Ya tienes cuenta? <a href="/signup" className="font-bold hover:underline">Registrate</a>.
+            <p className="text-white">¿Ya tienes cuenta? <a href="/login" className="font-bold hover:underline">Registrate</a>.
             </p>
           </div>
         </div>
